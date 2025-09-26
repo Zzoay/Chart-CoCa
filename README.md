@@ -1,5 +1,5 @@
 # Chart-CoCa
-This repository contains the official implementation of our CIKM 2025 paper:
+This repository contains the implementation of our CIKM 2025 paper:
 "Chart-CoCa: Self-Improving Chart Understanding of Vision LMs via Code-Driven Synthesis and Candidate-Conditioned Answering"
 
 Chart-CoCa centers around chart understanding and employs code as an intermediary for chart synthesis and candidate-conditioned answering, enabling Vision Language Models (VLMs) to enhance their own capabilities in comprehending charts.
