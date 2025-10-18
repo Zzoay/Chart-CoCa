@@ -28,7 +28,7 @@ python predict.py
 The code first generates answer candidates using the base model, then generates the final answer based on these candidates.
 This will result in prediction data compatible with the CharXiv evaluation code.
 
-The candidate generation model is OpenGVLab/InternVL2-8B, and the final answer generation model is yaozz/Chart-Answer-Selector, which was trained on our synthetic data. Our final answer generation model was uploaded to Huggingface.
+The candidate generation model is OpenGVLab/InternVL2-8B, and the final answer generation model is yaozz/Chart-Answer-Selector, which was trained on our synthetic data. Our final answer generation model was uploaded to Huggingface: https://huggingface.co/yaozz/Chart-Answer-Selector.
 
 
 Finally, use the official code in CharXiv to evaluate the model predictions.
