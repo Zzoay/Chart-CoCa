@@ -8,7 +8,7 @@ from tqdm import tqdm
 from constants import *
 
 # Configuration parameters
-batch_size = 64  # Set this batch size for inference since we're using two GPUs
+batch_size = 64  # Reduced batch size since we're using two GPUs
 repeat_sample_num = 5  # Number of answers to generate per question
 dataset_path = '../CharXiv/'
 info_path = os.path.join(dataset_path, 'data')
@@ -17,10 +17,10 @@ mul_ans_save_dir = os.path.join(dataset_path, "results/mul-internvl")
 final_ans_save_dir = os.path.join(dataset_path, "results/final")
 
  # or download from huggingface first
-generator_model = 'OpenGVLab/InternVL2-8B' 
-selector_model = 'yaozz/Chart-Answer-Selector' 
-# generator_model = 'ckpt/InternVL2-8B' 
-# selector_model = 'ckpt/InternVL2-8B-Selector'  
+# generator_model = 'OpenGVLab/InternVL2-8B' 
+# selector_model = 'yaozz/Chart-Answer-Selector' 
+generator_model = '/home/share/ckpt/InternVL2-8B' 
+selector_model = '/home/gongyao/InternVL/internvl_chat/work_dirs/internvl_chat_v2_0/InternVL2-8B-Selector'  
 
 
 model_suffix = generator_model.split('/')[-1]
@@ -243,7 +243,7 @@ def process_descriptive_tasks():
                     ret[key]["response"] = batch_critics[j*4 + idx]
     
     # Save final results
-    with open(os.path.join(final_ans_save_dir, f"results/final/gen-InternVL2-8B-descriptive_val.json"), 'w') as f:
+    with open(os.path.join(final_ans_save_dir, f"gen-{model_suffix}-descriptive_val.json"), 'w') as f:
         json.dump(ret, f, indent=4, ensure_ascii=False)
 
 def process_reasoning_tasks():
