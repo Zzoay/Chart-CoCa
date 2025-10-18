@@ -8,7 +8,7 @@ from tqdm import tqdm
 from constants import *
 
 # Configuration parameters
-batch_size = 64  # Reduced batch size since we're using two GPUs
+batch_size = 64  # Set this batch size for inference since we're using two GPUs
 repeat_sample_num = 5  # Number of answers to generate per question
 dataset_path = '../CharXiv/'
 info_path = os.path.join(dataset_path, 'data')
