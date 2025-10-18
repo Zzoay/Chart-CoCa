@@ -162,7 +162,6 @@ def process_descriptive_tasks():
                         max_new_tokens=512, 
                         do_sample=True,
                         top_p=0.6,
-                        temperature=0.7
                     )
                 )
                 
@@ -307,7 +306,6 @@ def process_reasoning_tasks():
                         max_new_tokens=512, 
                         do_sample=True,
                         top_p=0.6,
-                        temperature=0.7
                     )
                 )
                 
