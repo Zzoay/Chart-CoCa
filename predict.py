@@ -17,10 +17,8 @@ mul_ans_save_dir = os.path.join(dataset_path, "results/mul-internvl")
 final_ans_save_dir = os.path.join(dataset_path, "results/final")
 
  # or download from huggingface first
-# generator_model = 'OpenGVLab/InternVL2-8B' 
-# selector_model = 'yaozz/Chart-Decision-Maker-InternVL2-8B' 
-generator_model = '/home/share/ckpt/InternVL2-8B' 
-selector_model = '/home/gongyao/InternVL/internvl_chat/work_dirs/internvl_chat_v2_0/Chart-Decision-Maker-InternVL2-8B'  
+generator_model = 'OpenGVLab/InternVL2-8B' 
+selector_model = 'yaozz/Chart-Decision-Maker-InternVL2-8B'   
 
 
 model_suffix = generator_model.split('/')[-1]
