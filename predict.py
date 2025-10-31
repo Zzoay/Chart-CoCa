@@ -18,7 +18,7 @@ final_ans_save_dir = os.path.join(dataset_path, "results/final")
 
  # or download from huggingface first
 generator_model = 'OpenGVLab/InternVL2-8B' 
-selector_model = 'yaozz/Chart-Decision-Maker-InternVL2-8B'   
+selector_model = 'yaozz/Chart-Answer-Selector'   
 
 
 model_suffix = generator_model.split('/')[-1]
